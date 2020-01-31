@@ -1,0 +1,26 @@
+body{
+  margin: 0;
+}
+
+header{
+  background: #03a9f4;
+  text-align: center;
+}
+
+header input{
+  font-size: 20px;
+  margin: 20px 0px;
+}
+
+.logo{
+  color: #fff;
+  font-size: 50px;
+  font-family: "Anton";
+  text-align: center
+}
+
+.news_item{
+  padding: 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid gray;
+}

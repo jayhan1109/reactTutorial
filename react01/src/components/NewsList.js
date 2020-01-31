@@ -1,15 +1,16 @@
-import React, { Fragment } from 'react';
-import NewsListItem from './NewsListItem';
+import React, { Fragment } from "react";
+import NewsListItem from "./NewsListItem";
 
-const NewsList = () => {
+const NewsList = props => {
+  const news = props.news.map(item => (
+    <NewsListItem item={item} key={item.id} />
+  ));
+
   return (
     <Fragment>
-      <h1>News List</h1>
-      <NewsListItem/>
-      <NewsListItem/>
-      <NewsListItem/>
-    </Fragment>    
-      
+      {news}
+      {props.children}
+    </Fragment>
   );
 };
 
