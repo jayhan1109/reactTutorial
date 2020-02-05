@@ -12,6 +12,9 @@ import Home from "./components/Home";
 import Profile from "./components/Profile";
 import Postitem from "./components/Postitem";
 import NotFound from "./components/404";
+import Conditional from "./components/Conditional";
+import PureComp from "./components/PureComp";
+import User from "./hoc/User";
 
 const App = () => {
   return (
@@ -46,6 +49,30 @@ const App = () => {
               >
                 profile
               </NavLink>
+              <NavLink
+                to="/conditional"
+                className="p-2 text-dark"
+                activeStyle={{ fontWeight: "bold" }}
+                activeClassName="selected"
+              >
+                conditional
+              </NavLink>
+              <NavLink
+                to="/purecomp"
+                className="p-2 text-dark"
+                activeStyle={{ fontWeight: "bold" }}
+                activeClassName="selected"
+              >
+                purecomp
+              </NavLink>
+              <NavLink
+                to="/user"
+                className="p-2 text-dark"
+                activeStyle={{ fontWeight: "bold" }}
+                activeClassName="selected"
+              >
+                user
+              </NavLink>
             </nav>
           </div>
         </header>
@@ -54,8 +81,10 @@ const App = () => {
             <Route path="/posts/:id" component={Postitem} />
             <Route path="/posts" component={Posts} />
             <Route path="/profile" component={Profile} />
+            <Route path="/conditional" component={Conditional} />
+            <Route path="/purecomp" component={PureComp} />
+            <Route path="/user" component={User} />
             <Route path="/" component={Home} exact />
-            {/* <Route component={NotFound} /> */}
             <Route render={() => <h3>Page not Found</h3>} />
           </Switch>
         </div>
